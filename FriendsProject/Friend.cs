@@ -10,7 +10,7 @@ namespace FriendsProject {
         public string Email { get; set; }
         public bool BFF { get; set; } = false;
         public int HowLong { get; set; }
-        
+
 
         public Friend(string name, string phone, string email, bool bff, int howlong) {
             this.Name = name;
@@ -20,10 +20,9 @@ namespace FriendsProject {
             this.HowLong = howlong;
         }
         public Friend() {
-
         }
         public override string ToString() {
-            return $"{Name} {Phone} {Email} {(BFF ? "BFF" : "")} {HowLong}";
+            return $"{Name,-15} {Phone,-12} {Email,-25} {(BFF ? "BFF" : ""),3} {HowLong}";
         }
     }
 }
